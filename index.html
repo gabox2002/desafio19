@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tienda Electro</title>
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container-navbar">
+                <nav class="navbar container">
+                    <div class="container-logo">
+                        <i class="fa-solid fa-computer"></i>
+                        <h1 class="logo"><a href="/">Electro</a></h1>
+                    </div>
+                    <i class="fa-solid fa-bars"></i>
+                    <ul class="menu">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Categorías</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                    </ul>
+
+                    <form id="searchForm" class="input-container">
+                        <div class="label-icon-container">
+                            <label for="productName"></label>
+                        </div>
+                        <div class="search-container">
+                            <input
+                                type="text"
+                                class="search-input"
+                                id="productName"
+                                name="productName"
+                                placeholder="Buscar..."
+                                onkeydown="handleKeyPress(event)"
+                            />
+                            <i
+                                class="fa-solid fa-magnifying-glass search-icon"
+                                onclick="buscarProductos()"
+                            ></i>
+                        </div>
+                    </form>
+
+                    <div class="container-user">
+                        <div class="content-shopping-cart">
+                            <div class="notification">0</div>
+                            <i class="fa-solid fa-shopping-cart cart"></i>
+                        </div>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <h1 class="heading-1">
+                <i class="fa-solid fa-arrow-up" id="arrow-left"></i> Filtrar
+                Productos <i class="fa-solid fa-arrow-up" id="arrow-right"></i>
+            </h1>
+            <div class="container-products">
+                <div id="resultsContainer" class="menu-container">
+                    <!-- La lista de productos se generará aquí -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container container-footer">
+                <div class="menu-footer">
+                    <div class="information">
+                        <p class="title-footer">Información</p>
+                        <ul>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Categorías</a></li>
+                            <li><a href="#">Contactános</a></li>
+                        </ul>
+                    </div>
+                    <div class="my-account">
+                        <p class="title-footer">Mi cuenta</p>
+
+                        <ul>
+                            <li><a href="#">Mi cuenta</a></li>
+                            <li><a href="#">Historial de ordenes</a></li>
+                            <li><a href="#">Lista de deseos</a></li>
+                        </ul>
+                    </div>
+                    <div class="boxes">
+                        <div class="social-icons">
+                            <span class="tiktok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </span>
+                            <span class="youtube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </span>
+                            <span class="whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </span>
+                            <span class="instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <p>Desarrollado por Gabriel Quispe &copy; 2024</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous" ></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
